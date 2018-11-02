@@ -12,6 +12,17 @@ allprojects {
 		mavenLocal()
 		mavenCentral()
 		jcenter()
+
+		maven {
+			url "http://repository.jboss.org/nexus/content/groups/public/"
+		}
+		maven {
+			url "https://repository.jboss.org/nexus/content/repositories/snapshots/"
+		}
+		maven {
+			name "jboss-snapshots"
+			url "http://snapshots.jboss.org/maven2/"
+		}
 	}
 }
 
