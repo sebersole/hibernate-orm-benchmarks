@@ -1,0 +1,7 @@
+
+apply from: rootProject.file( 'gradle/benchmark-module.gradle' )
+
+dependencies {
+	compile libraries.orm6
+	compile project( ':hql-benchmark-common' )
+}

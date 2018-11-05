@@ -1,24 +1,31 @@
-apply from: rootProject.file( 'libraries.gradle' )
+buildscript {
+	repositories {
+		mavenCentral()
+		mavenLocal()
 
-apply plugin: 'java'
-
-group = 'org.hibernate'
-
-sourceCompatibility = 1.8
+		maven {
+			url 'https://plugins.gradle.org/m2/'
+		}
+		jcenter()
+	}
+	dependencies {
+		classpath 'me.champeau.gradle:jmh-gradle-plugin:0.4.7'
+	}
+}
 
 allprojects {
+	group = 'org.hibernate.perf.orm'
+	version = '1.0.0-SNAPSHOT'
+
 	project.buildDir = 'target'
+
 	repositories {
-		mavenLocal()
 		mavenCentral()
-		jcenter()
 
 		maven {
 			url "http://repository.jboss.org/nexus/content/groups/public/"
 		}
-		maven {
-			url "https://repository.jboss.org/nexus/content/repositories/snapshots/"
-		}
+
 		maven {
 			name "jboss-snapshots"
 			url "http://snapshots.jboss.org/maven2/"
@@ -26,75 +33,7 @@ allprojects {
 	}
 }
 
-buildscript {
-	repositories {
-		mavenCentral()
-		mavenLocal()
-
-		maven {
-			url "https://plugins.gradle.org/m2/"
-		}
-		jcenter()
-	}
-	dependencies {
-		classpath "me.champeau.gradle:jmh-gradle-plugin:0.4.7"
-	}
-}
-
-
 task wrapper( type: Wrapper ) {
 	gradleVersion = '4.10.2'
 	distributionType = 'ALL'
-}
-
-dependencies {
-	compile project( ':processor' )
-}
-
-sourceSets {
-	main {
-		java {
-			srcDir 'src/main/java'
-			srcDir 'src/jmh/java'
-		}
-	}
-}
-
-subprojects { subproject ->
-	apply plugin: 'java'
-
-	ext {
-		hibernate5Version = '5.3.7.Final'
-		hibernate6Version = '6.0.0-SNAPSHOT'
-	}
-
-	dependencies {
-		compile 'org.openjdk.jmh:jmh-generator-annprocess:1.21'
-		compile 'org.openjdk.jmh:jmh-core:1.21'
-		compile group: 'javax.persistence', name: 'javax.persistence-api', version: '2.2'
-	}
-
-	if ( !subproject.name.equals( "processor" ) ) {
-		apply plugin: 'application'
-		dependencies {
-			compile rootProject
-			compile project(':processor')
-			compile libraries.h2
-			compile libraries.logging
-			runtime libraries.jta
-			runtime libraries.dom4j
-			runtime libraries.classmate
-			runtime libraries.byteBuddy
-		}
-
-		mainClassName = 'org.openjdk.jmh.Main'
-
-		jar {
-			manifest {
-				attributes 'Main-Class': 'org.openjdk.jmh.Main'
-			}
-		}
-	}
-
-	// ./gradlew -p benchmarks/orm6 --no-daemon clean runShadow --args='-wi 10 -i 20 -f 1 -o human_report.jmh'
 }
