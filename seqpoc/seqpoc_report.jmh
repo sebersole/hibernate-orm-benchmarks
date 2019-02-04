@@ -1,0 +1,269 @@
+# JMH version: 1.21
+# VM version: JDK 1.8.0_171, Java HotSpot(TM) 64-Bit Server VM, 25.171-b11
+# VM invoker: /home/sebersole/.sdkman/candidates/java/8.0.171-oracle/jre/bin/java
+# VM options: -Dfile.encoding=UTF-8 -Duser.country=US -Duser.language=en -Duser.variant
+# Warmup: 10 iterations, 10 s each
+# Measurement: 20 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.hibernate.benchmarks.EntityWithBidirectionalOneToOneJoinTableTest.getParent
+
+# Run progress: 0.00% complete, ETA 00:25:00
+# Fork: 1 of 1
+# Warmup Iteration   1: 69345.508 ops/s
+# Warmup Iteration   2: 95877.761 ops/s
+# Warmup Iteration   3: 94803.009 ops/s
+# Warmup Iteration   4: 93457.998 ops/s
+# Warmup Iteration   5: 93974.491 ops/s
+# Warmup Iteration   6: 95444.019 ops/s
+# Warmup Iteration   7: 93932.855 ops/s
+# Warmup Iteration   8: 92858.200 ops/s
+# Warmup Iteration   9: 93857.333 ops/s
+# Warmup Iteration  10: 95094.639 ops/s
+Iteration   1: 91790.744 ops/s
+Iteration   2: 94995.855 ops/s
+Iteration   3: 92353.186 ops/s
+Iteration   4: 92616.010 ops/s
+Iteration   5: 94035.956 ops/s
+Iteration   6: 93909.891 ops/s
+Iteration   7: 90196.545 ops/s
+Iteration   8: 94799.877 ops/s
+Iteration   9: 93951.019 ops/s
+Iteration  10: 92289.554 ops/s
+Iteration  11: 87204.321 ops/s
+Iteration  12: 89815.214 ops/s
+Iteration  13: 92074.280 ops/s
+Iteration  14: 85181.522 ops/s
+Iteration  15: 91675.644 ops/s
+Iteration  16: 92692.924 ops/s
+Iteration  17: 92480.141 ops/s
+Iteration  18: 93235.988 ops/s
+Iteration  19: 95786.270 ops/s
+Iteration  20: 94163.364 ops/s
+
+
+Result "org.hibernate.benchmarks.EntityWithBidirectionalOneToOneJoinTableTest.getParent":
+  92262.415 ±(99.9%) 2241.047 ops/s [Average]
+  (min, avg, max) = (85181.522, 92262.415, 95786.270), stdev = 2580.793
+  CI (99.9%): [90021.369, 94503.462] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 1.8.0_171, Java HotSpot(TM) 64-Bit Server VM, 25.171-b11
+# VM invoker: /home/sebersole/.sdkman/candidates/java/8.0.171-oracle/jre/bin/java
+# VM options: -Dfile.encoding=UTF-8 -Duser.country=US -Duser.language=en -Duser.variant
+# Warmup: 10 iterations, 10 s each
+# Measurement: 20 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.hibernate.benchmarks.HqlQueryBenchmarks_SemanticModel.simpleSelect
+
+# Run progress: 20.00% complete, ETA 00:20:09
+# Fork: 1 of 1
+# Warmup Iteration   1: 6.748 us/op
+# Warmup Iteration   2: 5.566 us/op
+# Warmup Iteration   3: 5.607 us/op
+# Warmup Iteration   4: 5.672 us/op
+# Warmup Iteration   5: 5.663 us/op
+# Warmup Iteration   6: 5.588 us/op
+# Warmup Iteration   7: 5.788 us/op
+# Warmup Iteration   8: 5.644 us/op
+# Warmup Iteration   9: 5.731 us/op
+# Warmup Iteration  10: 5.607 us/op
+Iteration   1: 5.565 us/op
+Iteration   2: 5.588 us/op
+Iteration   3: 5.859 us/op
+Iteration   4: 5.608 us/op
+Iteration   5: 5.587 us/op
+Iteration   6: 5.691 us/op
+Iteration   7: 5.744 us/op
+Iteration   8: 5.634 us/op
+Iteration   9: 5.757 us/op
+Iteration  10: 5.632 us/op
+Iteration  11: 5.603 us/op
+Iteration  12: 5.902 us/op
+Iteration  13: 5.500 us/op
+Iteration  14: 5.587 us/op
+Iteration  15: 5.777 us/op
+Iteration  16: 5.680 us/op
+Iteration  17: 5.549 us/op
+Iteration  18: 5.767 us/op
+Iteration  19: 5.709 us/op
+Iteration  20: 5.790 us/op
+
+
+Result "org.hibernate.benchmarks.HqlQueryBenchmarks_SemanticModel.simpleSelect":
+  5.677 ±(99.9%) 0.094 us/op [Average]
+  (min, avg, max) = (5.500, 5.677, 5.902), stdev = 0.109
+  CI (99.9%): [5.582, 5.771] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 1.8.0_171, Java HotSpot(TM) 64-Bit Server VM, 25.171-b11
+# VM invoker: /home/sebersole/.sdkman/candidates/java/8.0.171-oracle/jre/bin/java
+# VM options: -Dfile.encoding=UTF-8 -Duser.country=US -Duser.language=en -Duser.variant
+# Warmup: 10 iterations, 10 s each
+# Measurement: 20 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.hibernate.benchmarks.HqlQueryBenchmarks_SemanticModel.simpleSelect_multiple
+
+# Run progress: 40.00% complete, ETA 00:15:06
+# Fork: 1 of 1
+# Warmup Iteration   1: 22.555 us/op
+# Warmup Iteration   2: 20.093 us/op
+# Warmup Iteration   3: 21.015 us/op
+# Warmup Iteration   4: 20.497 us/op
+# Warmup Iteration   5: 20.895 us/op
+# Warmup Iteration   6: 20.635 us/op
+# Warmup Iteration   7: 20.215 us/op
+# Warmup Iteration   8: 20.686 us/op
+# Warmup Iteration   9: 21.240 us/op
+# Warmup Iteration  10: 21.232 us/op
+Iteration   1: 21.648 us/op
+Iteration   2: 23.373 us/op
+Iteration   3: 19.895 us/op
+Iteration   4: 19.524 us/op
+Iteration   5: 19.384 us/op
+Iteration   6: 19.506 us/op
+Iteration   7: 19.518 us/op
+Iteration   8: 19.636 us/op
+Iteration   9: 19.627 us/op
+Iteration  10: 19.862 us/op
+Iteration  11: 19.552 us/op
+Iteration  12: 19.727 us/op
+Iteration  13: 19.669 us/op
+Iteration  14: 19.486 us/op
+Iteration  15: 19.536 us/op
+Iteration  16: 19.558 us/op
+Iteration  17: 19.524 us/op
+Iteration  18: 19.965 us/op
+Iteration  19: 19.935 us/op
+Iteration  20: 19.840 us/op
+
+
+Result "org.hibernate.benchmarks.HqlQueryBenchmarks_SemanticModel.simpleSelect_multiple":
+  19.938 ±(99.9%) 0.815 us/op [Average]
+  (min, avg, max) = (19.384, 19.938, 23.373), stdev = 0.938
+  CI (99.9%): [19.124, 20.753] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 1.8.0_171, Java HotSpot(TM) 64-Bit Server VM, 25.171-b11
+# VM invoker: /home/sebersole/.sdkman/candidates/java/8.0.171-oracle/jre/bin/java
+# VM options: -Dfile.encoding=UTF-8 -Duser.country=US -Duser.language=en -Duser.variant
+# Warmup: 10 iterations, 10 s each
+# Measurement: 20 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.hibernate.benchmarks.HqlQueryBenchmarks_SemanticModel.simpleWhere
+
+# Run progress: 60.00% complete, ETA 00:10:04
+# Fork: 1 of 1
+# Warmup Iteration   1: 11.428 us/op
+# Warmup Iteration   2: 10.050 us/op
+# Warmup Iteration   3: 10.076 us/op
+# Warmup Iteration   4: 9.935 us/op
+# Warmup Iteration   5: 11.166 us/op
+# Warmup Iteration   6: 9.968 us/op
+# Warmup Iteration   7: 9.997 us/op
+# Warmup Iteration   8: 10.001 us/op
+# Warmup Iteration   9: 10.073 us/op
+# Warmup Iteration  10: 9.959 us/op
+Iteration   1: 10.052 us/op
+Iteration   2: 10.115 us/op
+Iteration   3: 10.090 us/op
+Iteration   4: 10.526 us/op
+Iteration   5: 10.726 us/op
+Iteration   6: 11.016 us/op
+Iteration   7: 11.201 us/op
+Iteration   8: 11.376 us/op
+Iteration   9: 10.545 us/op
+Iteration  10: 10.257 us/op
+Iteration  11: 10.121 us/op
+Iteration  12: 10.525 us/op
+Iteration  13: 10.103 us/op
+Iteration  14: 10.066 us/op
+Iteration  15: 10.618 us/op
+Iteration  16: 10.558 us/op
+Iteration  17: 10.497 us/op
+Iteration  18: 10.331 us/op
+Iteration  19: 10.145 us/op
+Iteration  20: 10.093 us/op
+
+
+Result "org.hibernate.benchmarks.HqlQueryBenchmarks_SemanticModel.simpleWhere":
+  10.448 ±(99.9%) 0.341 us/op [Average]
+  (min, avg, max) = (10.052, 10.448, 11.376), stdev = 0.392
+  CI (99.9%): [10.107, 10.789] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 1.8.0_171, Java HotSpot(TM) 64-Bit Server VM, 25.171-b11
+# VM invoker: /home/sebersole/.sdkman/candidates/java/8.0.171-oracle/jre/bin/java
+# VM options: -Dfile.encoding=UTF-8 -Duser.country=US -Duser.language=en -Duser.variant
+# Warmup: 10 iterations, 10 s each
+# Measurement: 20 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.hibernate.benchmarks.HqlQueryBenchmarks_SemanticModel.simpleWhere_multiple
+
+# Run progress: 80.00% complete, ETA 00:05:02
+# Fork: 1 of 1
+# Warmup Iteration   1: 37.198 us/op
+# Warmup Iteration   2: 30.067 us/op
+# Warmup Iteration   3: 28.895 us/op
+# Warmup Iteration   4: 28.651 us/op
+# Warmup Iteration   5: 28.833 us/op
+# Warmup Iteration   6: 29.045 us/op
+# Warmup Iteration   7: 29.371 us/op
+# Warmup Iteration   8: 29.076 us/op
+# Warmup Iteration   9: 29.099 us/op
+# Warmup Iteration  10: 29.044 us/op
+Iteration   1: 29.136 us/op
+Iteration   2: 29.249 us/op
+Iteration   3: 29.006 us/op
+Iteration   4: 29.223 us/op
+Iteration   5: 29.354 us/op
+Iteration   6: 29.594 us/op
+Iteration   7: 29.234 us/op
+Iteration   8: 29.023 us/op
+Iteration   9: 29.248 us/op
+Iteration  10: 29.318 us/op
+Iteration  11: 30.051 us/op
+Iteration  12: 29.278 us/op
+Iteration  13: 29.631 us/op
+Iteration  14: 28.891 us/op
+Iteration  15: 29.048 us/op
+Iteration  16: 29.090 us/op
+Iteration  17: 29.749 us/op
+Iteration  18: 29.029 us/op
+Iteration  19: 29.134 us/op
+Iteration  20: 29.178 us/op
+
+
+Result "org.hibernate.benchmarks.HqlQueryBenchmarks_SemanticModel.simpleWhere_multiple":
+  29.273 ±(99.9%) 0.248 us/op [Average]
+  (min, avg, max) = (28.891, 29.273, 30.051), stdev = 0.285
+  CI (99.9%): [29.025, 29.521] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:25:10
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark                                                Mode  Cnt      Score      Error  Units
+EntityWithBidirectionalOneToOneJoinTableTest.getParent  thrpt   20  92262.415 ± 2241.047  ops/s
+HqlQueryBenchmarks_SemanticModel.simpleSelect            avgt   20      5.677 ±    0.094  us/op
+HqlQueryBenchmarks_SemanticModel.simpleSelect_multiple   avgt   20     19.938 ±    0.815  us/op
+HqlQueryBenchmarks_SemanticModel.simpleWhere             avgt   20     10.448 ±    0.341  us/op
+HqlQueryBenchmarks_SemanticModel.simpleWhere_multiple    avgt   20     29.273 ±    0.248  us/op

@@ -10,7 +10,8 @@ public class BenchmarkFactory {
 	public static BenchmarkSession buildTestSession() {
 		return getTestSession( new String[] {
 				"org.hibernate.benchmarks.ORM5BenchmarkSession",
-				"org.hibernate.benchmarks.Orm6BenchmarkSession"
+				"org.hibernate.benchmarks.Orm6BenchmarkSession",
+				"org.hibernate.benchmarks.orm6.seqpoc.VersionSupportImpl"
 		} );
 	}
 
